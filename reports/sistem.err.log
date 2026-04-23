@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "c:\stabil_jb\venv\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "c:\stabil_jb\venv\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\stabil_jb\venv\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "c:\stabil_jb\venv\Lib\site-packages\nbclient\client.py", line 650, in async_setup_kernel
+    yield
+  File "c:\stabil_jb\venv\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "c:\stabil_jb\venv\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "c:\stabil_jb\venv\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Menggunakan Kode Pyton
+
+import numpy as np
+
+A = np.array([[1,1,1],
+              [2,1,1],
+              [1,2,1]])
+
+b = np.array([6,8,9])
+
+solusi = np.linalg.solve(A,b)
+
+print("x =", solusi[0])
+print("y =", solusi[1])
+print("z =", solusi[2])
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
+[32m      1[39m [38;5;66;03m# Menggunakan Kode Pyton[39;00m
+[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m      5[39m A = np.array([[[32m1[39m,[32m1[39m,[32m1[39m],
+[32m      6[39m               [[32m2[39m,[32m1[39m,[32m1[39m],
+[32m      7[39m               [[32m1[39m,[32m2[39m,[32m1[39m]])
+[32m      9[39m b = np.array([[32m6[39m,[32m8[39m,[32m9[39m])
+
+[31mModuleNotFoundError[39m: No module named 'numpy'
+
