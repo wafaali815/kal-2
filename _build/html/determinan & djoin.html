@@ -1,0 +1,922 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'determinan & djoin';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Invers Matriks A" href="tugas.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Materi Kal
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sistem.html">SISTEM PERSAMAAN LINIER (SPL)</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Eliminasi.html">ELIMINASI GAUSSIAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas.html">Invers Matriks A</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/nurulfitriyah0210-ai/kal" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/nurulfitriyah0210-ai/kal/issues/new?title=Issue%20on%20page%20%2Fdeterminan & djoin.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/determinan & djoin.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>SOAL!!</p>
+<p>A. Determinan Ekspansi Baris</p>
+<ol class="arabic">
+<li><p>A = $<span class="math notranslate nohighlight">\(\begin{bmatrix} -7 &amp; -5 \\ 1 &amp; 4 \end{bmatrix}\)</span>$</p>
+<p>jawaban :</p>
+<p>Ekspansi baris pertama:   $<span class="math notranslate nohighlight">\(det(A)=(−1)1+1(−7)⋅M11​+(−1)1+2(−5)⋅M12​\)</span>$</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M11 = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(M12 = 1\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   =(+1)(−7)(4)+(−1)(−5)(1)\\
+   =−28+5=−23
+   \end{split}\]</div>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="2">
+<li><div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 0 &amp; 2 &amp; -3 \\ 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\end{split}\]</div>
+<p>jawaban:</p>
+<p>Ekspansi baris ke-3 :</p>
+<div class="math notranslate nohighlight">
+\[
+   \sum_{k=1}^3 (-1)^{3+k} a_{3k} {M_3k}
+   \]</div>
+<p>elemen baris ke3 :   0, 0, 1</p>
+<p>Hitung ekspansi :  $<span class="math notranslate nohighlight">\(det(A)=(−1)3+1(0)⋅M31​+(−1)3+2(0)⋅M32​+(−1)3+3(1)⋅M33​\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+(−1)4(0)(M31​)=0 \\
+(−1)5(0)(M32​)=0 \\
+(−1)6(1)(M33)=(+1)(1)⋅M33
+ ​​\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   M_{33} =
+   \begin{vmatrix}
+   0 &amp; 2 \\
+   1 &amp; -2
+   \end{vmatrix}
+   = (0)(-2) - (2)(1)
+   = 0 - 2
+   = -2
+   \end{split}\]</div>
+<p>Hasil akhir  :  $<span class="math notranslate nohighlight">\(det(A)=0+0+(1)(−2)=−2​\)</span><span class="math notranslate nohighlight">\(
+                  \)</span><span class="math notranslate nohighlight">\(det(A)=−2\)</span>$</p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic" start="3">
+<li><div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 1 &amp; -3 &amp; 1 &amp; 1 \\ -3 &amp; 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; -3 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; -3 \end{bmatrix}.\end{split}\]</div>
+<p>jawaban :</p>
+<p>Ekspansi baris ke-4 :
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^4 (-1)^{4+k} a_{4k} {M_4k}
+\)</span>$</p>
+<p>elemen baris ke-4 : 1, 1, 1, -3</p>
+<p>Hitung ekspansi : $<span class="math notranslate nohighlight">\(det(A)=(−1)5(1)M41​+(−1)6(1)M42​+(−1)7(1)M43​+(−1)8(−3)M44\)</span>$</p>
+<p>Hitung minor :
+<span class="math notranslate nohighlight">\(M_{41}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   M_{41} =
+   \begin{vmatrix}
+   -3 &amp; 1 &amp; 1 \\
+   1 &amp; -3 &amp; 1 \\
+   1 &amp; 1 &amp; -3
+   \end{vmatrix}
+   = -16
+   \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(M_{42}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   M_{42} =
+   \begin{vmatrix}
+   1 &amp; 1 &amp; 1 \\
+   -3 &amp; 1 &amp; 1 \\
+   1 &amp; -3 &amp; 1
+   \end{vmatrix}
+   = 16
+   \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(M_{43}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   M_{43} =
+   \begin{vmatrix}
+   1 &amp; -3 &amp; 1 \\
+   -3 &amp; 1 &amp; 1 \\
+   1 &amp; 1 &amp; 1
+   \end{vmatrix}
+   = -16
+   \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(M_{44}\)</span>
+$<span class="math notranslate nohighlight">\(
+M_{44} =
+\begin{vmatrix}
+1 &amp; -3 &amp; 1 \\
+-3 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -3
+\end{vmatrix}
+= -16
+\)</span>$</p>
+<p>Substitusi :
+$$
+\det(A) =
+(-1)(1)(-16)</p>
+<ul class="simple">
+<li><p>(1)(1)(16)</p></li>
+<li><p>(-1)(1)(-16)</p></li>
+<li><p>(1)(-3)(-16)
+$$</p></li>
+</ul>
+<p>Hasil:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   \det(A) = 16 + 16 + 16 + 48 = 96\\
+   \boxed{\det(A) = 96}
+   \end{split}\]</div>
+</li>
+</ol>
+<hr class="docutils" />
+<p>B. Matriks Adjoin</p>
+<ol class="arabic" start="4">
+<li><div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} -7 &amp; -5 \\ 1 &amp; 4 \end{bmatrix}\end{split}\]</div>
+<p>jawaban :</p>
+<p>Rumus : $<span class="math notranslate nohighlight">\((\operatorname{adj} A)_{ij} = (-1)^{i+j} M_{ji}\\
+            A^{-1} = \frac{1}{\det A} \operatorname{adj} A.\)</span>$</p>
+<ul class="simple">
+<li><p>Determinan</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+   \det(A) = (-7)(4) - (-5)(1)
+   = -28 + 5
+   = -23
+   \]</div>
+<ul class="simple">
+<li><p>Matriks Kofaktor</p></li>
+</ul>
+<p>Gunakan tanda:
+$$
+\begin{bmatrix}</p>
+<ul class="simple">
+<li><p>&amp; - \</p></li>
+</ul>
+<ul class="simple">
+<li><p>&amp; +
+\end{bmatrix}
+$$</p></li>
+</ul>
+<p>Minor:</p>
+<div class="math notranslate nohighlight">
+\[
+   M_{11} = 4,\quad M_{12} = 1,\quad M_{21} = -5,\quad M_{22} = -7
+   \]</div>
+<p>Kofaktor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   C =
+   \begin{bmatrix}
+   (+1)(4) &amp; (-1)(1) \\
+   (-1)(-5) &amp; (+1)(-7)
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+   4 &amp; -1 \\
+   5 &amp; -7
+   \end{bmatrix}
+   \end{split}\]</div>
+<ul class="simple">
+<li><p>Adjoin (transpose kofaktor)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   \text{adj}(A) =
+   \begin{bmatrix}
+   4 &amp; 5 \\
+   -1 &amp; -7
+   \end{bmatrix}
+   \end{split}\]</div>
+<ul>
+<li><p>Invers Matriks</p>
+<p>Gunakan rumus:</p>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+   A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
+   \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A^{-1} = \frac{1}{-23}
+   \begin{bmatrix}
+   4 &amp; 5 \\
+   -1 &amp; -7
+   \end{bmatrix}
+   \end{split}\]</div>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Hasil Akhir</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A^{-1} =
+   \begin{bmatrix}
+   -\frac{4}{23} &amp; -\frac{5}{23} \\
+   \frac{1}{23} &amp; \frac{7}{23}
+   \end{bmatrix}
+   \end{split}\]</div>
+<hr class="docutils" />
+<ol class="arabic" start="5">
+<li><div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 0 &amp; 2 &amp; -3 \\ 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\end{split}\]</div>
+<p>jawaban:</p>
+</li>
+</ol>
+<ul>
+<li><p>Determinan</p>
+<p>Ekspansi baris ke-3:</p>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   \det(A) =
+   (-1)^{3+3}(1) \cdot
+   \begin{vmatrix}
+   0 &amp; 2 \\
+   1 &amp; -2
+   \end{vmatrix}
+   \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+   = (1)\big[(0)(-2) - (2)(1)\big]
+   = -2
+   \]</div>
+<ul>
+<li><p>Matriks Kofaktor</p>
+<p>Hitung semua minor:</p>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{11} =
+\begin{vmatrix}
+-2 &amp; -1 \\
+0 &amp; 1
+\end{vmatrix} = -2
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{12} =
+-\begin{vmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{vmatrix} = -1
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{13} =
+\begin{vmatrix}
+1 &amp; -2 \\
+0 &amp; 0
+\end{vmatrix} = 0
+\end{split}\]</div>
+<hr class="docutils" />
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{21} =
+-\begin{vmatrix}
+2 &amp; -3 \\
+0 &amp; 1
+\end{vmatrix} = -2
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{22} =
+\begin{vmatrix}
+0 &amp; -3 \\
+0 &amp; 1
+\end{vmatrix} = 0
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{23} =
+-\begin{vmatrix}
+0 &amp; 2 \\
+0 &amp; 0
+\end{vmatrix} = 0
+\end{split}\]</div>
+<hr class="docutils" />
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{31} =
+\begin{vmatrix}
+2 &amp; -3 \\
+-2 &amp; -1
+\end{vmatrix} = -8
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{32} =
+-\begin{vmatrix}
+0 &amp; -3 \\
+1 &amp; -1
+\end{vmatrix} = -3
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C_{33} =
+\begin{vmatrix}
+0 &amp; 2 \\
+1 &amp; -2
+\end{vmatrix} = -2
+\end{split}\]</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Matriks Kofaktor</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C =
+\begin{bmatrix}
+-2 &amp; -1 &amp; 0 \\
+-2 &amp; 0 &amp; 0 \\
+-8 &amp; -3 &amp; -2
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Adjoin Transpose:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{adj}(A) =
+\begin{bmatrix}
+-2 &amp; -2 &amp; -8 \\
+-1 &amp; 0 &amp; -3 \\
+0 &amp; 0 &amp; -2
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Invers</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+A^{-1} = \frac{1}{-2} \cdot \text{adj}(A)
+\]</div>
+<ul class="simple">
+<li><p>Hasil Akhir</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+1 &amp; 1 &amp; 4 \\
+\frac{1}{2} &amp; 0 &amp; \frac{3}{2} \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<hr class="docutils" />
+<ol class="arabic" start="6">
+<li><div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 1 &amp; -3 &amp; 1 &amp; 1 \\ -3 &amp; 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; -3 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; -3 \end{bmatrix}.\end{split}\]</div>
+<p>jawaban:</p>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Determinan</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = 96
+\]</div>
+<ul class="simple">
+<li><p>Rumus Invers</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
+\]</div>
+<ul class="simple">
+<li><p>Hasil Adjoin</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{adj}(A) =
+\begin{bmatrix}
+32 &amp; -16 &amp; -16 &amp; -16 \\
+-16 &amp; 32 &amp; -16 &amp; -16 \\
+-16 &amp; -16 &amp; 32 &amp; -16 \\
+-16 &amp; -16 &amp; -16 &amp; 32
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Invers</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} = \frac{1}{96}
+\begin{bmatrix}
+32 &amp; -16 &amp; -16 &amp; -16 \\
+-16 &amp; 32 &amp; -16 &amp; -16 \\
+-16 &amp; -16 &amp; 32 &amp; -16 \\
+-16 &amp; -16 &amp; -16 &amp; 32
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Sederhanakan</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+\frac{1}{3} &amp; -\frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{6} \\
+-\frac{1}{6} &amp; \frac{1}{3} &amp; -\frac{1}{6} &amp; -\frac{1}{6} \\
+-\frac{1}{6} &amp; -\frac{1}{6} &amp; \frac{1}{3} &amp; -\frac{1}{6} \\
+-\frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{6} &amp; \frac{1}{3}
+\end{bmatrix}
+\end{split}\]</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Invers Matriks A</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
