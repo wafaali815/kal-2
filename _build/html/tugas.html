@@ -186,7 +186,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="Eliminasi.html">ELIMINASI GAUSSIAN</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Invers Matriks A</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="DeterminanDjoin.html">Tugas Harian KAL2</a></li>
 
 </ul>
@@ -384,7 +383,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Invers Matriks A</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diketahui">1. Diketahui</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">2. Rumus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks-a">3. Determinan Matriks A</a></li>
@@ -392,10 +390,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoin-matriks-transpose-kofaktor">5. Adjoin Matriks (Transpose Kofaktor)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invers-matriks">6. Invers Matriks</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-kal">TUGAS KAL</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -470,58 +464,6 @@ A⁻¹ =
 \end{split}\]</div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="tugas-kal">
-<h1>TUGAS KAL<a class="headerlink" href="#tugas-kal" title="Link to this heading">#</a></h1>
-<p><a class="reference download internal" download="" href="_downloads/f34b67c345dfa598f52130a4eb4ae110/fotoTugas.jpeg"><span class="xref download myst">fotoTugas</span></a></p>
-<p>Dari Gambar Di Atas</p>
-<ul class="simple">
-<li><p>A = (2, 3)</p></li>
-<li><p>B = (2, 1)</p></li>
-<li><p>C = (4, 1)</p></li>
-<li><p>D = (2, 4)</p></li>
-<li><p>E = (2, 0)</p></li>
-<li><p>F = (4, 0)</p></li>
-</ul>
-<p>Semua transformasi yang diminta ternyata adalah <strong>translasi</strong> (geser), jadi bentuk matriksnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T = \begin{pmatrix} 1 &amp; 0 &amp; a \\ 0 &amp; 1 &amp; b \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<p>dengan vektor translasi <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
-<p><strong>1. A → B</strong></p>
-<p>Dari (2,3) ke (2,1) → turun 2
-vektor: (0, -2)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{A \to B} = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<hr class="docutils" />
-<p><strong>2. D → E</strong></p>
-<p>Dari (2,4) ke (2,0) → turun 4
-vektor: (0, -4)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{D \to E} = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; -4 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<p><strong>3. E → F</strong></p>
-<p>Dari (2,0) ke (4,0) → kanan 2
-vektor: (2, 0)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{E \to F} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<hr class="docutils" />
-<p><strong>4. B → C</strong></p>
-<p>Dari (2,1) ke (4,1) → kanan 2
-vektor: (2, 0)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{B \to C} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<p><strong>5. A → C</strong></p>
-<p>Dari (2,3) ke (4,1) → kanan 2, turun 2
-vektor: (2, -2)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{A \to C} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<hr class="docutils" />
-<p><strong>6. D → F</strong></p>
-<p>Dari (2,4) ke (4,0) → kanan 2, turun 4
-vektor: (2, -4)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} T_{D \to F} = \begin{pmatrix} 1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; -4 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \end{split}\]</div>
-<iframe src="https://www.geogebra.org/calculator/pskjq2e3?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-<hr class="docutils" />
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -587,7 +529,6 @@ vektor: (2, -4)</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Invers Matriks A</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diketahui">1. Diketahui</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">2. Rumus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks-a">3. Determinan Matriks A</a></li>
@@ -595,10 +536,6 @@ vektor: (2, -4)</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoin-matriks-transpose-kofaktor">5. Adjoin Matriks (Transpose Kofaktor)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invers-matriks">6. Invers Matriks</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-kal">TUGAS KAL</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
