@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ELIMINASI GAUSSIAN &#8212; My sample book</title>
+    <title>Tugas Materi Dekomposisi Q &amp; R &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Eliminasi';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugasKAL';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Invers Matriks A" href="tugas.html" />
-    <link rel="prev" title="SISTEM PERSAMAAN LINIER (SPL)" href="sistem.html" />
+    <link rel="prev" title="Transformasi Matriks" href="matrix_animation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,13 +183,13 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistem.html">SISTEM PERSAMAAN LINIER (SPL)</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ELIMINASI GAUSSIAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Eliminasi.html">ELIMINASI GAUSSIAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas.html">Invers Matriks A</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DeterminanDjoin.html">Tugas Harian KAL2</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="matrix_animation.html">Transformasi Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugasKAL.html">Tugas Materi Dekomposisi Q &amp; R</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Materi Dekomposisi Q &amp; R</a></li>
 
 </ul>
 
@@ -263,7 +262,7 @@
       
       
       
-      <li><a href="https://github.com/wafaali815/kal-2/issues/new?title=Issue%20on%20page%20%2FEliminasi.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/wafaali815/kal-2/issues/new?title=Issue%20on%20page%20%2FtugasKAL.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +292,7 @@
       
       
       
-      <li><a href="_sources/Eliminasi.ipynb" target="_blank"
+      <li><a href="_sources/tugasKAL.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ELIMINASI GAUSSIAN</h1>
+    <h1>Tugas Materi Dekomposisi Q & R</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,8 +386,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penyelesaian-sistem-persamaan-linier-tiga-variabel-empat-variabel-dengan-menggunakan-eliminasi-gaussian">Contoh Penyelesaian Sistem Persamaan Linier Tiga Variabel &amp; Empat Variabel Dengan Menggunakan Eliminasi Gaussian.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Materi Dekomposisi Q &amp; R</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gram-schmidt-process-finding-q2">Gram-Schmidt Process: Finding q₂</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#given">Given:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-q1-completed">Step 1: q₁ (Completed) ✓</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-finding-v2">Step 2: Finding v₂</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-projection-coefficient">Compute projection coefficient:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-v2">Compute v₂:</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-normalize-to-get-q2">Step 3: Normalize to get q₂</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Compute ‖v₂‖:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-q2">Final q₂:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-q1-q2-0">Verification: q₁ · q₂ ≈ 0 ✓</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -399,261 +416,150 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="eliminasi-gaussian">
-<h1>ELIMINASI GAUSSIAN<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h1>
-<section id="contoh-penyelesaian-sistem-persamaan-linier-tiga-variabel-empat-variabel-dengan-menggunakan-eliminasi-gaussian">
-<h2>Contoh Penyelesaian Sistem Persamaan Linier Tiga Variabel &amp; Empat Variabel Dengan Menggunakan Eliminasi Gaussian.<a class="headerlink" href="#contoh-penyelesaian-sistem-persamaan-linier-tiga-variabel-empat-variabel-dengan-menggunakan-eliminasi-gaussian" title="Link to this heading">#</a></h2>
-<p><strong>A. Sistem Persamaan Linear Tiga Vriabel</strong></p>
-<p><strong>1. Sistem Persamaan</strong></p>
+  <section id="tugas-materi-dekomposisi-q-r">
+<h1>Tugas Materi Dekomposisi Q &amp; R<a class="headerlink" href="#tugas-materi-dekomposisi-q-r" title="Link to this heading">#</a></h1>
+<p><img alt="fotoTugas1" src="_images/fotoTugas1.jpeg" />
+<img alt="fotoTugas2" src="_images/fotoTugas2.jpeg" />
+<img alt="fotoTugas3" src="_images/fotoTugas3.jpeg" />
+<img alt="fotoTugas4" src="_images/fotoTugas4.jpeg" />
+<img alt="fotoTugas5" src="_images/fotoTugas5.jpeg" /></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
-x + y + z = 6 \\
-2x + y - z = 3 \\
-x - y + z = 2
-\end{cases}
-\end{split}\]</div>
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-<script>
-sagecell.makeSagecell({inputLocation: '.sage'});
-</script>
-<div class="sage">
-A = matrix([[1, 1, 1, 6],[2, -1, 1, 3],[1, -1, 1, 2]])
-A.add_multiple_of_row(1, 0, -2)
-A.add_multiple_of_row(2, 0, -1)
-print (A)
-</div>
-<p><strong>2. Matriks Augmented</strong></p>
+\[\begin{split} A = \begin{bmatrix} 7 &amp; 12 &amp; 3 &amp; 9 \\ 15 &amp; 2 &amp; 18 &amp; 6 \\ 4 &amp; 11 &amp; 8 &amp; 14 \\ 10 &amp; 5 &amp; 16 &amp; 1 \end{bmatrix} \end{split}\]</div>
+<p>mencari <span class="math notranslate nohighlight">\(q_1\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | &amp; 6 \\
-2 &amp; 1 &amp; -1 &amp; | &amp; 3 \\
-1 &amp; -1 &amp; 1 &amp; | &amp; 2
-\end{bmatrix}
-\end{split}\]</div>
-<p><strong>3. Eliminasi Gauss (Manual)</strong></p>
-<p><strong>Langkah 1</strong></p>
-<p>Membuat semua elemen di bawah pivot pertama menjadi 0</p>
-<p>Operasi:</p>
-<p><span class="math notranslate nohighlight">\(
-R_2 \leftarrow R_2 - 2R_1
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-R_3 \leftarrow R_3 - R_1
-\)</span></p>
+\[\begin{split} a_1 = \begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix} \end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | &amp; 6 \\
-0 &amp; -1 &amp; -3 &amp; | &amp; -9 \\
-0 &amp; -2 &amp; 0 &amp; | &amp; -4
-\end{bmatrix}
-\end{split}\]</div>
-<p><strong>Langkah 2</strong></p>
-<p><span class="math notranslate nohighlight">\(
-R_3 \leftarrow R_3 + 2R_2
-\)</span></p>
+\[ v_1 = a_1 \]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | &amp; 6 \\
-0 &amp; -1 &amp; -3 &amp; | &amp; -9 \\
-0 &amp; 0 &amp; 6 &amp; | &amp; 14
-\end{bmatrix}
-\end{split}\]</div>
-<p><strong>4. Substitusi Balik</strong></p>
+\[ |v_1| = \sqrt{7^2 + 15^2 + 4^2 + 10^2} \]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-6z &amp;= 14 \Rightarrow z = \frac{7}{3} \\
--y - 3z &amp;= -9 \Rightarrow y = 2 \\
-x + y + z &amp;= 6 \Rightarrow x = \frac{5}{3}
-\end{aligned}
-\end{split}\]</div>
-<p><strong>5. Solusi</strong></p>
-<p>Jadi, nilai x, y, dan z adalah:</p>
+\[ = \sqrt{49 + 225 + 16 + 100} = \sqrt{390} \]</div>
 <div class="math notranslate nohighlight">
-\[
-x = \frac{3}{5}, \quad
-y = 2, \quad
-z = \frac{3}{7}
-\]</div>
+\[\begin{split} q_1 = \frac{v_1}{|v_1|} \quad q_1 = \frac{1}{\sqrt{390}} \begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix} \end{split}\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="gram-schmidt-process-finding-q2">
+<h1>Gram-Schmidt Process: Finding q₂<a class="headerlink" href="#gram-schmidt-process-finding-q2" title="Link to this heading">#</a></h1>
+<section id="given">
+<h2>Given:<a class="headerlink" href="#given" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 7 &amp; 12 &amp; 3 &amp; 9 \\ 15 &amp; 2 &amp; 18 &amp; 6 \\ 4 &amp; 11 &amp; 8 &amp; 14 \\ 10 &amp; 5 &amp; 16 &amp; 1 \end{bmatrix}\end{split}\]</div>
+</section>
+<section id="step-1-q1-completed">
+<h2>Step 1: q₁ (Completed) ✓<a class="headerlink" href="#step-1-q1-completed" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = a_1 = \begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\|v_1\| = \sqrt{7^2 + 15^2 + 4^2 + 10^2} = \sqrt{390}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}q_1 = \frac{v_1}{\|v_1\|} = \frac{1}{\sqrt{390}}\begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix}\end{split}\]</div>
+</section>
 <hr class="docutils" />
-<p><strong>B. Sistem Persamaan Linear Empat Variabel.</strong></p>
-<p><strong>Soal</strong></p>
+<section id="step-2-finding-v2">
+<h2>Step 2: Finding v₂<a class="headerlink" href="#step-2-finding-v2" title="Link to this heading">#</a></h2>
+<section id="formula">
+<h3>Formula:<a class="headerlink" href="#formula" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
-x + y + z + w = 10 \\
-2x + y - z + w = 8 \\
-x - y + 2z - w = 3 \\
-3x + 2y + z + w = 14
-\end{cases}
-\end{split}\]</div>
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-<script>
-sagecell.makeSagecell({inputLocation: '.sage'});
-</script>
-<div class="sage">
-A = matrix([[1, 1, 1, 1, 10],[2, 1, -1, 1, 8],[1, -1, 2, -1, 3],[3, 2, 1, 1, 14]])
-A.add_multiple_of_row(1, 0, -2)
-A.add_multiple_of_row(2, 0, -1)
-print (A)
-</div>
-<p><strong>1️⃣ Bentuk Matriks Augmented</strong></p>
+\[v_2 = a_2 - (a_2 \cdot q_1)q_1\]</div>
+</section>
+<section id="compute-projection-coefficient">
+<h3>Compute projection coefficient:<a class="headerlink" href="#compute-projection-coefficient" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left[
-\begin{array}{cccc|c}
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 10 \\
-2 &amp; 1 &amp; -1 &amp; 1 &amp; 8 \\
-1 &amp; -1 &amp; 2 &amp; -1 &amp; 3 \\
-3 &amp; 2 &amp; 1 &amp; 1 &amp; 14
-\end{array}
-\right]
-\end{split}\]</div>
-<p><strong>2️⃣ Eliminasi Gauss</strong></p>
-<p><strong>Langkah 1: Hilangkan elemen di bawah pivot pertama (kolom 1)</strong></p>
-<p><span class="math notranslate nohighlight">\(
-R_2 \leftarrow R_2 - 2R_1
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-R_3 \leftarrow R_3 - R_1
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-R_4 \leftarrow R_4 - 3R_1
-\)</span></p>
-<p>Hasil:</p>
+\[a_2 \cdot q_1 = \frac{1}{\sqrt{390}}(12\cdot7 + 2\cdot15 + 11\cdot4 + 5\cdot10)\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left[
-\begin{array}{cccc|c}
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 10 \\
-0 &amp; -1 &amp; -3 &amp; -1 &amp; -12 \\
-0 &amp; -2 &amp; 1 &amp; -2 &amp; -7 \\
-0 &amp; -1 &amp; -2 &amp; -2 &amp; -16
-\end{array}
-\right]
-\end{split}\]</div>
-<p><strong>Langkah 2: Hilangkan elemen di bawah pivot kedua</strong></p>
-<p><span class="math notranslate nohighlight">\(
-R_3 \leftarrow R_3 + 2R_2
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-R_4 \leftarrow R_4 + R_2
-\)</span></p>
-<p>Hasil:</p>
+\[= \frac{1}{\sqrt{390}}(84 + 30 + 44 + 50) = \frac{208}{\sqrt{390}}\]</div>
+</section>
+<section id="compute-v2">
+<h3>Compute v₂:<a class="headerlink" href="#compute-v2" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left[
-\begin{array}{cccc|c}
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 10 \\
-0 &amp; -1 &amp; -3 &amp; -1 &amp; -12 \\
-0 &amp; 0 &amp; 7 &amp; 0 &amp; 17 \\
-0 &amp; 0 &amp; 1 &amp; -1 &amp; -4
-\end{array}
-\right]
-\end{split}\]</div>
-<p><strong>Langkah 4: Hilangkan elemen di bawah pivot ketiga</strong></p>
-<p>R4 ​← R4 ​− 7/1​R3​</p>
-<p>Hasil akhir bentuk segitiga atas:</p>
+\[\begin{split}v_2 = \begin{bmatrix} 12 \\ 2 \\ 11 \\ 5 \end{bmatrix} - \frac{208}{390}\begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left[
-\begin{array}{cccc|c}
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 10 \\
-0 &amp; 1 &amp; 3 &amp; 1 &amp; 12 \\
-0 &amp; 0 &amp; 7 &amp; 0 &amp; 17 \\
-0 &amp; 0 &amp; 0 &amp; -1 &amp; -45/7
-\end{array}
-\right]
-\end{split}\]</div>
-<p><strong>3️⃣ Substitusi Balik</strong></p>
-<p>Dari baris ke-4:</p>
+\[\begin{split}v_2 = \begin{bmatrix} 12 \\ 2 \\ 11 \\ 5 \end{bmatrix} - \frac{104}{195}\begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[
--w = -45/7
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-w = 45/7
-\]</div>
-<p>Baris ke-3:</p>
-<div class="math notranslate nohighlight">
-\[
-7z = 17
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-z = \frac{17}{7}
-\]</div>
-<p>Baris ke-2:</p>
-<div class="math notranslate nohighlight">
-\[
-y + 3z + w = 12
-\]</div>
-<p>Substitusi:</p>
-<div class="math notranslate nohighlight">
-\[
-y + 3\left(\frac{17}{7}\right) + \frac{45}{7} = 12
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y + \frac{51}{7} + \frac{45}{7} = 12
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y + \frac{96}{7} = 12
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y = 12 - \frac{96}{7}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y = \frac{84}{7} - \frac{96}{7}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-y = -\frac{12}{7}
-\]</div>
-<p>Baris pertama:</p>
-<div class="math notranslate nohighlight">
-\[
-x + y + z + w = 10
-\]</div>
-<p>Substitusi:</p>
-<div class="math notranslate nohighlight">
-\[
-x - \frac{12}{7} + \frac{17}{7} + \frac{45}{7} = 10
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-x + \frac{50}{7} = 10
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-x = 10 - \frac{50}{7}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-x = \frac{70}{7} - \frac{50}{7}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-x = \frac{20}{7}
-\]</div>
-<p><strong>=&gt; Jawaban Akhir</strong></p>
-<p>Jadi nilai dari variabel x, y, z, dan w adalah:</p>
-<div class="math notranslate nohighlight">
-\[
-x = \frac{20}{7}, \quad
-y = -\frac{12}{7}, \quad
-z = \frac{17}{7}, \quad
-w = \frac{45}{7}
-\]</div>
+\[\begin{split}v_2 \approx \begin{bmatrix} 8.267 \\ -6.000 \\ 8.867 \\ -0.333 \end{bmatrix}\end{split}\]</div>
+</section>
+</section>
 <hr class="docutils" />
+<section id="step-3-normalize-to-get-q2">
+<h2>Step 3: Normalize to get q₂<a class="headerlink" href="#step-3-normalize-to-get-q2" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Compute ‖v₂‖:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\|v_2\| = \sqrt{(8.267)^2 + (-6)^2 + (8.867)^2 + (-0.333)^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\|v_2\| \approx \sqrt{68.34 + 36 + 78.62 + 0.11} \approx \sqrt{183.07} \approx 13.53\]</div>
+</section>
+<section id="final-q2">
+<h3>Final q₂:<a class="headerlink" href="#final-q2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}q_2 = \frac{v_2}{\|v_2\|} \approx \frac{1}{13.53}\begin{bmatrix} 8.267 \\ -6.000 \\ 8.867 \\ -0.333 \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}q_2 \approx \begin{bmatrix} 0.611 \\ -0.443 \\ 0.655 \\ -0.025 \end{bmatrix}\end{split}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="verification-q1-q2-0">
+<h2>Verification: q₁ · q₂ ≈ 0 ✓<a class="headerlink" href="#verification-q1-q2-0" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[q_1 \cdot q_2 \approx \frac{1}{\sqrt{390}\cdot13.53}(7\cdot8.267 + 15\cdot(-6) + 4\cdot8.867 + 10\cdot(-0.333))\]</div>
+<div class="math notranslate nohighlight">
+\[\approx \frac{1}{\sqrt{390}\cdot13.53}(57.87 - 90 + 35.47 - 3.33) \approx 0\]</div>
+<blockquote>
+<div><p><strong>Next</strong>: Continue with <span class="math notranslate nohighlight">\(a_3\)</span> to find <span class="math notranslate nohighlight">\(v_3 = a_3 - (a_3 \cdot q_1)q_1 - (a_3 \cdot q_2)q_2\)</span></p>
+</div></blockquote>
+<hr class="docutils" />
+<p>mencari <span class="math notranslate nohighlight">\(q_2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} a_2 = \begin{bmatrix} 12 \\ 2 \\ 11 \\ 5 \end{bmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[ v_2 = a_2 - (a_2 \cdot q_1)q_1 \]</div>
+<div class="math notranslate nohighlight">
+\[ a_2 \cdot q_1 = (12)(7) + (2)(15) + (11)(4) + (5)(10) \]</div>
+<div class="math notranslate nohighlight">
+\[ = 84 + 30 + 44 + 50 = 208 \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} v_2 = a_2 - \frac{208}{390} \begin{bmatrix} 7 \\ 15 \\ 4 \\ 10 \end{bmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} v_2 = \begin{bmatrix} 12 \\ 2 \\ 11 \\ 5 \end{bmatrix} - \begin{bmatrix} 3.73 \\ 8 \\ 2.13 \\ 5.33 \end{bmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} v_2 \approx \begin{bmatrix} 8.27 \\ -6 \\ 8.87 \\ -0.33 \end{bmatrix} \end{split}\]</div>
+<p>No.
+Date</p>
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\(v_3 \approx \begin{bmatrix} -4.26 \\ 1.98 \\ 5.54 \\ 3.68 \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_3 = 8.05\)</span></p>
+<p><span class="math notranslate nohighlight">\(q_3 \approx \begin{bmatrix} -0.529 \\ 0.246 \\ 0.688 \\ 0.457 \end{bmatrix}\)</span></p>
+<hr class="docutils" />
+<p><strong>mencari q4</strong></p>
+<p><span class="math notranslate nohighlight">\(a_4 = \begin{bmatrix} 9 \\ 6 \\ 14 \\ 1 \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_4 = a_4 - (a_4 \cdot q_1)q_1 - (a_4 \cdot q_2)q_2 - (a_4 \cdot q_3)q_3\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_4 = \begin{bmatrix} 0.85 \\ -1.92 \\ 0.44 \\ 1.57 \end{bmatrix} \quad |v_4| = 2.63\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q_4 = \begin{bmatrix}
+0.323 \\
+-0.230 \\
+0.167 \\
+0.597
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{matrix } Q = \begin{bmatrix}
+0.355 &amp; 0.605 &amp; -0.529 &amp; 0.323 \\
+0.760 &amp; -0.439 &amp; 0.246 &amp; -0.230 \\
+0.203 &amp; 0.649 &amp; 0.688 &amp; 0.167 \\
+0.507 &amp; -0.024 &amp; 0.457 &amp; 0.597
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{matrix } R = \begin{bmatrix}
+19.74 &amp; 10.53 &amp; 24.45 &amp; 10.79 \\
+0 &amp; 13.66 &amp; -2.33 &amp; 12.24 \\
+0 &amp; 0 &amp; 8.05 &amp; 1.44 \\
+0 &amp; 0 &amp; 0 &amp; 2.63
+\end{bmatrix}
+\end{split}\]</div>
 </section>
 </section>
 
@@ -688,22 +594,13 @@ w = \frac{45}{7}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="sistem.html"
+       href="matrix_animation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SISTEM PERSAMAAN LINIER (SPL)</p>
+        <p class="prev-next-title">Transformasi Matriks</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="tugas.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Invers Matriks A</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -721,8 +618,26 @@ w = \frac{45}{7}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penyelesaian-sistem-persamaan-linier-tiga-variabel-empat-variabel-dengan-menggunakan-eliminasi-gaussian">Contoh Penyelesaian Sistem Persamaan Linier Tiga Variabel &amp; Empat Variabel Dengan Menggunakan Eliminasi Gaussian.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tugas Materi Dekomposisi Q &amp; R</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gram-schmidt-process-finding-q2">Gram-Schmidt Process: Finding q₂</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#given">Given:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-q1-completed">Step 1: q₁ (Completed) ✓</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-finding-v2">Step 2: Finding v₂</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-projection-coefficient">Compute projection coefficient:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-v2">Compute v₂:</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-normalize-to-get-q2">Step 3: Normalize to get q₂</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Compute ‖v₂‖:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-q2">Final q₂:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-q1-q2-0">Verification: q₁ · q₂ ≈ 0 ✓</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
